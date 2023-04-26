@@ -1,3 +1,19 @@
 {
-
+"listUsers" : [
+  {
+    "prenom": "John",
+    "nom": "Doe",
+    "nombre_enfants": 1
+  },
+  {
+    "prenom": "Jane",
+    "nom": "Doe",
+    "nombre_enfants": 2
+  },
+  {
+    "prenom": "Bob",
+    "nom": "Smith",
+    "nombre_enfants": 3
+  }
+]
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {User} from '../entity/User';
 
 @Component({
   selector: 'app-user-card',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserCardComponent implements OnInit {
 
   constructor() { }
+  @Input() u: User = new User();
 
   ngOnInit(): void {
   }

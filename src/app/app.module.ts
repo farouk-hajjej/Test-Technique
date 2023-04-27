@@ -12,7 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     AppComponent,
     ConfigSideBarComponent,
-    UserCardComponent
+    UserCardComponent,
   ],
     imports: [
         BrowserModule,
@@ -20,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]

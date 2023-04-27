@@ -1,19 +1,22 @@
 {
-"listUsers" : [
-  {
-    "prenom": "John",
-    "nom": "Doe",
-    "nombre_enfants": 1
-  },
-  {
-    "prenom": "Jane",
-    "nom": "Doe",
-    "nombre_enfants": 2
-  },
-  {
-    "prenom": "Bob",
-    "nom": "Smith",
-    "nombre_enfants": 3
-  }
-]
+  "listUsers": [
+    {
+      "id": 1,
+      "prenom": "Farouk",
+      "nom": "Hajjej",
+      "nombre_enfants": 1
+    },
+    {
+      "id": 2,
+      "prenom": "test1",
+      "nom": "test1",
+      "nombre_enfants": 2
+    },
+    {
+      "id": 3,
+      "prenom": "test2",
+      "nom": "tset2",
+      "nombre_enfants": 3
+    }
+  ]
 }

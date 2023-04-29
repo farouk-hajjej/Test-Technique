@@ -11,14 +11,22 @@ export class UserCardComponent implements OnInit {
 
   constructor(private apiUsersService:ApiUsersService) { }
   listUsers:User[]=[];
-  u: User;
+  message: string;
+  popoverTitle = 'Popover title';
+  popoverMessage = 'Popover description';
+  confirmClicked = false;
+  cancelClicked = false;
+  @Input() u: User=new User();
   ngOnInit(): void {
     this.getListUsers();
   }
 
 
   SaveListUsersInJson() {
-    this.apiUsersService.AddUser(this.u).subscribe(()=>this.listUsers = [this.u, ...this.listUsers]);
+    this.apiUsersService.AddUser(this.u).subscribe(
+      data => {
+        this.getListUsers();
+      });
   }
 
    getListUsers() {
@@ -30,4 +38,13 @@ export class UserCardComponent implements OnInit {
      return this.listUsers;
 
   }
+
+  /** Supprime un utilisateur de la liste */
+  deleteUser(id: number): void {
+    this.apiUsersService.deleteUser(id)
+      .subscribe(() => {
+        this.getListUsers(); // Met à jour la liste des utilisateurs après la suppression
+      });
+  }
+
 }

@@ -58,3 +58,25 @@
  </div>
 </div>
 </div>
+<table id="example1" class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id </th>
+    <th scope="col">Nom</th>
+    <th scope="col">Prénom</th>
+    <th scope="col">Nombre d'enfants</th>
+    <th scope="col" colspan="2" >Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of listUsers  " align="center">
+    <td>{{user.id}}</td>
+    <td>{{user.nom}}</td>
+    <td>{{user.prenom}}</td>
+    <td>{{user.nombre_enfants}}</td>
+    <td><button class="btn btn-danger" title="Delete" (click)="deleteUser(user.id)" > Delete</button></td>
+
+  </tr>
+
+  </tbody>
+</table>
